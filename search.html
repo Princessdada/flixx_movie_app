@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    
+    <link rel="stylesheet" href="search.html">
+    <link rel="stylesheet" href="show.html">
+    <link rel="stylesheet" href="movie-details.html">
+    <link rel="stylesheet" href="spinner.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>Flixx | Search Movies & Shows</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><h1>FLIXX</h1></div>
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="/">Movies</a></li>
+                    <li><a  class="nav-link" href="show.html">TV Shows</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Movies -->
+    <section class="search">
+        <div class="search-container">
+            <div id="alert"></div>
+            <form action="/search.html" class="search-form">
+                <div class="search-radio">
+                    <input type="radio" id="movie" name="type" value="movie" checked />
+                    <label for="movies">Movies</label>
+                    <input type="radio" id="tv" name="type" value="tv"/>
+                    <label for="tv">TV Shows</label>
+                </div>
+                <div class="search-flex">
+                    <input type="text" name="search-term" id="search-term" placeholder="Enter search term"/>
+                    <button class="btn" type="submit"><img src="images/search-svgrepo-com.svg"></button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    <section id="search-results-wrapper" class="shows">
+        <heading id="search-results-heading"></heading>
+        <div id="search-results" class = "movie-grid"></div>
+        <div id="pagination">
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="logo"><h1>FLIXX</h1></div>
+            <div class="icons">
+                <img src="/images/facebook-alt-svgrepo-com.svg" alt="Facebook"/>
+                <img src="/images/instagram-svgrepo-com (1).svg" alt="Instagram"/>
+                <img src="/images/twitter-svgrepo-com (1).svg" alt="Twitter"/>
+            </div>
+        </div>
+    </footer>
+    <div class="spinner"></div>
+    <script src="script.js"></script>
+    
+</body>
+</html>

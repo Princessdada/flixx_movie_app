@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="search.html">
+    <link rel="stylesheet" href="show.html">
+    <link rel="stylesheet" href="movie-details.html">
+    <link rel="stylesheet" href="spinner.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<title>Flixx App</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><h1>FLIXX</h1></div>
+            <nav>
+                <ul>
+                    <li><a class="nav-link" href="/">Movies</a></li>
+                    <li><a  class="nav-link" href="show.html">TV Shows</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="now-playing">
+        <h2>NOW PLAYING</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper"></div>
+        </div>
+
+    </section>
+    <section class="search">
+        <div  class="search-container">
+            <div id="alert"></div>
+            <form action="/search.html" class="search-form">
+                <div class="search-radio">
+                    <input type="radio" id="movie" name="type" value="movie" checked />
+                    <label for="movies">Movies</label>
+                    <input type="radio" id="tv" name="type" value="tv"/>
+                    <label for="tv">TV Shows</label>
+                </div>
+                <div class="search-flex">
+                    <input type="text" name="search-term" id="search-term" placeholder="Enter search term"/>
+                    <button class="btn" type="submit"><img src="images/search-svgrepo-com.svg"></button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+    
+    
+
+    <section id="shows" >
+        <h2>POPULAR MOVIES</h2>
+        <div id="popular-movies" class = "movie-grid">
+            <!-- <div  class="flixx-images">
+                <div class="card">
+                     <a href="movie-details.html">
+                        <img src="/images/no-image.jpg"
+                        alt="Movie Title"/>
+                    </a>
+                    <div class="movie-title">
+                        <h5>Movie Title</h5>
+                        <p><small>Release: xx/xx/xxxx</small></p>
+    
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="movie-details.html">
+                        <img src="/images/no-image.jpg"
+                        alt="Movie Title"/>
+                    </a>
+                    <div class="movie-title">
+                        <h5>Movie Title</h5>
+                        <p><small>Release: xx/xx/xxxx</small></p>
+    
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="movie-details.html">
+                        <img src="/images/no-image.jpg"
+                        alt="Movie Title"/>
+                    </a>
+                    <div class="movie-title">
+                        <h5>Movie Title</h5>
+                        <p><small>Release: xx/xx/xxxx</small></p>
+    
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="movie-details.html">
+                        <img src="/images/no-image.jpg"
+                        alt="Movie Title"/>
+                    </a>
+                    <div class="movie-title">
+                        <h5>Movie Title</h5>
+                        <p><small>Release: xx/xx/xxxx</small></p>
+    
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="movie-details.html">
+                        <img src="/images/no-image.jpg"
+                        alt="Movie Title"/>
+                    </a>
+                    <div class="movie-title">
+                        <h5>Movie Title</h5>
+                        <p><small>Release: xx/xx/xxxx</small></p>
+    
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="movie-details.html">
+                        <img src="/images/no-image.jpg"
+                        alt="Movie Title"/>
+                    </a>
+                    <div class="movie-title">
+                        <h5>Movie Title</h5>
+                        <p><small>Release: xx/xx/xxxx</small></p>
+    
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="movie-details.html">
+                        <img src="/images/no-image.jpg"
+                        alt="Movie Title"/>
+                    </a>
+                    <div class="movie-title">
+                        <h5>Movie Title</h5>
+                        <p><small>Release: xx/xx/xxxx</small></p>
+    
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="movie-details.html">
+                        <img src="/images/no-image.jpg"
+                        alt="Movie Title"/>
+                    </a>
+                    <div class="movie-title">
+                        <h5>Movie Title</h5>
+                        <p><small>Release: xx/xx/xxxx</small></p>
+    
+                    </div>
+                </div> 
+                
+                
+                
+            </div> -->
+
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="logo"><h1>FLIXX</h1></div>
+            <div class="icons">
+                <a href="#"><img src="/images/facebook-alt-svgrepo-com.svg" alt="Facebook"/></a>
+                <a href="#"><img src="/images/instagram-svgrepo-com (1).svg" alt="Instagram"/></a>
+                <a href="#"><img src="/images/twitter-svgrepo-com (1).svg" alt="Twitter"/></a>
+            </div>
+        </div>
+    </footer>
+    <div class="spinner"></div>
+    <script src="script.js"></script>
+</body>
+</html>

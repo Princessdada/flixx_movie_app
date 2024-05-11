@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "../ravenous"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Flixx Movie App"
+  }
+}
