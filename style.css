@@ -43,9 +43,6 @@ a {
     
 }
 
-.main-header a{
-  z-index: -1;
-}
 
 .main-header .container {
     display: flex;
@@ -192,6 +189,20 @@ input#search-term:focus{
   gap: 10px;
   
 }
+
+.back{
+  background: #020d18;
+  padding: 20px;
+  
+}
+.back img{
+  width: 30px;
+  color: #ccc;
+  display: flex;
+  filter: invert(100%)
+  
+}
+
 .movie-container{
   width: 1280px;
   background-color: #020d18;

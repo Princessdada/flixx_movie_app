@@ -214,10 +214,10 @@ function displayBackgroundImage(type, backgroundPath) {
   overlayDiv.style.backgroundSize = "cover";
   overlayDiv.style.backgroundPosition = "center";
   overlayDiv.style.backgroundRepeat = "no-repeat";
-  overlayDiv.style.height = "100vh";
-  overlayDiv.style.width = "100vw";
+  overlayDiv.style.height = "80vh";
+  overlayDiv.style.width = "80vw";
   overlayDiv.style.position = "absolute";
-  overlayDiv.style.top = "0";
+  overlayDiv.style.top = "20vh";
   overlayDiv.style.left = "0";
   overlayDiv.style.zIndex = "1";
   overlayDiv.style.opacity = "0.1";
