@@ -1,2 +1,3 @@
 [submodule "flixx_movie_app"]
+	 path = flixx_movie_app
 	url = https://github.com/Princessdada/flixx_movie_app.git
