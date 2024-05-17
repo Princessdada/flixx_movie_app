@@ -42,7 +42,7 @@ async function displayPopularMovies() {
 //
 async function displayPopularShows() {
   const { results } = await fetchAPIData("tv/popular");
-
+  console.log(results);
   results.forEach((show) => {
     const div = document.createElement("div");
     div.classList.add("card");
@@ -50,7 +50,7 @@ async function displayPopularShows() {
         <a href="tv-details.html?id=${show.id}">
              ${
                show.poster_path
-                 ? `<img src="https://image.tmdb.org/t/p/w500${show.poster_path}" class="card-img-top" alt="Movie Title"/>`
+                 ? `<img src= "https://image.tmdb.org/t/p/w500${show.poster_path}" class="card-img-top" alt="${show.name}"/>`
                  : ` <img src="/images/no-image.jpg"
              alt="${show.name}"/>`
              }
@@ -154,7 +154,7 @@ async function displayShowDetails() {
           <div>
             ${
               show.poster_path
-                ? `<img src="https://image.tmdb.org/t/p/ws500${show.poster_path}"
+                ? `<img src="https://image.tmdb.org/t/p/w500${show.poster_path}"
                 class="card-img-top"
                 alt="${show.name}"
                 />`
@@ -164,6 +164,7 @@ async function displayShowDetails() {
                 alt="${show.name}"/>`
             }
           </div>
+          <div class="movie-content">
           <div class="show-details">
             <h2>${show.name}</h2>
             <p>
@@ -182,6 +183,7 @@ async function displayShowDetails() {
               show.homepage
             }" target="_blank" class="btn">Visit Show Homepage</a>
           </div>
+        </div>
         </div>
         <div class="details-bottom">
           <h2>Show Info</h2>
@@ -215,9 +217,9 @@ function displayBackgroundImage(type, backgroundPath) {
   overlayDiv.style.backgroundPosition = "center";
   overlayDiv.style.backgroundRepeat = "no-repeat";
   overlayDiv.style.height = "80vh";
-  overlayDiv.style.width = "80vw";
+  overlayDiv.style.width = "100vw";
   overlayDiv.style.position = "absolute";
-  overlayDiv.style.top = "20vh";
+  overlayDiv.style.top = "30vh";
   overlayDiv.style.left = "0";
   overlayDiv.style.zIndex = "1";
   overlayDiv.style.opacity = "0.1";
@@ -237,10 +239,14 @@ async function displaySlider() {
     div.classList.add("swiper-slide");
     div.innerHTML = `
         <a href="movie-details.html?id=${movie.id}">
-        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"/>
+        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${
+      movie.title
+    }"/>
         </a>
-        <h4 class="swiper-rating">
-        <i class="fas fa-star text-secondary"></i> ${movie.vote_average} / 10 </h4>`;
+         <h4 class="swiper-rating">
+         <i class="fas fa-star text-secondary"></i>  ${Math.round(
+           movie.vote_average
+         )} / 10 </h4>`;
 
     document.querySelector(".swiper-wrapper").appendChild(div);
 
